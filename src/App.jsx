@@ -3,6 +3,7 @@ import { gapi } from "gapi-script";
 import { BrowserRouter as Router } from "react-router-dom";
 import Loading from "./components/General/Loading";
 import Routes from "./routes";
+import ThemeToggle from "./components/General/ThemeToogle";
 
 const App = () => {
   useEffect(() => {
@@ -20,6 +21,8 @@ const App = () => {
     <Suspense fallback={<Loading />}>
       <Router>
         <Routes />
+
+        <ThemeToggle />
       </Router>
     </Suspense>
   );
